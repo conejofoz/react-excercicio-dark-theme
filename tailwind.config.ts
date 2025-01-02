@@ -15,4 +15,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode: 'class', /* media pega a configuração do S.O. */
 } satisfies Config;

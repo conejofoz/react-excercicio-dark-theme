@@ -16,6 +16,12 @@ export const ThemeProvider = ({children}: {children: ReactNode})=>{
     );
 
     useEffect(()=> {
+        /* ADICIONAR A CLASSE DO TAILWIND AO HTML MANUALMENTE */
+        if(theme === 'dark'){
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark'); //light é o padrão, não precisa add
+        }
         localStorage.setItem(STORAGE_KEY, theme);
     }, [theme])
 
